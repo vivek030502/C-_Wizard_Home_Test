@@ -1,7 +1,3 @@
-Here's a formatted version of your README file for the TCP Client-Server Packet Transmission project, which includes appropriate Markdown syntax for better readability:
-
----
-
 # TCP Client-Server Packet Transmission with Missing Sequence Handling
 
 ## Overview
