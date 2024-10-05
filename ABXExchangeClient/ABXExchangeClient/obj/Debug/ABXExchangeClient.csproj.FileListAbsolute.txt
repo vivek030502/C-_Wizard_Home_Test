@@ -1,0 +1,10 @@
+D:\Coding\Interview\abx_exchange_server\ABXExchangeClient\ABXExchangeClient\bin\Debug\ABXExchangeClient.exe.config
+D:\Coding\Interview\abx_exchange_server\ABXExchangeClient\ABXExchangeClient\bin\Debug\ABXExchangeClient.exe
+D:\Coding\Interview\abx_exchange_server\ABXExchangeClient\ABXExchangeClient\bin\Debug\ABXExchangeClient.pdb
+D:\Coding\Interview\abx_exchange_server\ABXExchangeClient\ABXExchangeClient\bin\Debug\Newtonsoft.Json.dll
+D:\Coding\Interview\abx_exchange_server\ABXExchangeClient\ABXExchangeClient\bin\Debug\Newtonsoft.Json.xml
+D:\Coding\Interview\abx_exchange_server\ABXExchangeClient\ABXExchangeClient\obj\Debug\ABXExchangeClient.csproj.AssemblyReference.cache
+D:\Coding\Interview\abx_exchange_server\ABXExchangeClient\ABXExchangeClient\obj\Debug\ABXExchangeClient.csproj.CoreCompileInputs.cache
+D:\Coding\Interview\abx_exchange_server\ABXExchangeClient\ABXExchangeClient\obj\Debug\ABXExcha.0F9966ED.Up2Date
+D:\Coding\Interview\abx_exchange_server\ABXExchangeClient\ABXExchangeClient\obj\Debug\ABXExchangeClient.exe
+D:\Coding\Interview\abx_exchange_server\ABXExchangeClient\ABXExchangeClient\obj\Debug\ABXExchangeClient.pdb
