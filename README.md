@@ -66,10 +66,10 @@ dotnet restore
 
 ### Run the Server
 
-Before starting the client, ensure the server is running. Use the provided server code or your own implementation:
+Before starting the client, ensure the server is running. Open Command Prompt or any terminal and change the directory to abx_exchange_server and run the following code:
 
 ```bash
-node abx_exchange_server/main.js
+node main.js
 ```
 
 ### Run the Client
