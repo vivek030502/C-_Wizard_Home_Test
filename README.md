@@ -1,94 +1,102 @@
-#TCP Client-Server Packet Transmission with Missing Sequence Handling
+Here's a formatted version of your README file for the TCP Client-Server Packet Transmission project, which includes appropriate Markdown syntax for better readability:
 
-##Overview
+---
+
+# TCP Client-Server Packet Transmission with Missing Sequence Handling
+
+## Overview
 
 This project implements a TCP client that connects to a server to receive packets containing trading information. The client can detect missing packets based on sequence numbers and requests the server to resend any missing packets. The packets received are parsed and saved to a JSON file for further analysis.
----
 
-##Table of Contents
+## Table of Contents
 
-Requirements
-Project Structure
-How It Works
-Running the Application Locally
-Images
-Output
-Contributing
-License
----
+- [Requirements](#requirements)
+- [Project Structure](#project-structure)
+- [How It Works](#how-it-works)
+- [Running the Application Locally](#running-the-application-locally)
+- [Output](#output)
+- [Contributing](#contributing)
+- [License](#license)
 
-##Requirements
+## Requirements
 
-.NET SDK (version 5.0 or later)
-Newtonsoft.Json package for JSON serialization
-A TCP server to respond to the client's requests (see server implementation section)
----
+- .NET SDK (version 5.0 or later)
+- Newtonsoft.Json package for JSON serialization
+- A TCP server to respond to the client's requests (see server implementation section)
 
-##Project Structure
-arduino
-Copy code
+## Project Structure
+
+```
 /Server-Client_Packet_Transmission
 ├── ABXExchangeClient
-│   └── ABXExchangeClient
-|   |  └── Program.cs
-|   |  └── bin
-|   |      └── output,json
-├── abx_exchange_server
-│   └── main.js
----
+│   ├── Program.cs
+│   └── bin
+│       └── output.json
+└── abx_exchange_server
+    └── main.js
+```
 
-##How It Works
+## How It Works
 
-Client Connection: The client connects to a specified TCP server.
-Packet Reading: The client sends a request to the server and begins reading packets from the stream.
-Packet Parsing: Each packet is parsed to extract the symbol, buy/sell indicator, quantity, price, and sequence number.
-Missing Sequence Detection: The client tracks received sequence numbers and identifies any missing packets.
-Resend Requests: For each missing sequence, the client requests the server to resend the corresponding packet.
-JSON Output: All received packets are saved to an output.json file for analysis.
----
+1. **Client Connection**: The client connects to a specified TCP server.
+2. **Packet Reading**: The client sends a request to the server and begins reading packets from the stream.
+3. **Packet Parsing**: Each packet is parsed to extract the symbol, buy/sell indicator, quantity, price, and sequence number.
+4. **Missing Sequence Detection**: The client tracks received sequence numbers and identifies any missing packets.
+5. **Resend Requests**: For each missing sequence, the client requests the server to resend the corresponding packet.
+6. **JSON Output**: All received packets are saved to an `output.json` file for analysis.
 
-##Running the Application Locally
+## Running the Application Locally
+
 To run this application on your local machine, follow these steps:
 
-###Install .NET SDK:
+### Install .NET SDK
 
-Download and install the .NET SDK from the .NET Download page.
+Download and install the .NET SDK from the [.NET Download page](https://dotnet.microsoft.com/download/dotnet).
 
-###Clone the Repository:
+### Clone the Repository
 
-bash
-Copy code
+```bash
 git clone <repository-url>
-cd PacketTransmission
+cd Server-Client_Packet_Transmission
+```
 
-###Install Dependencies: Make sure to restore the NuGet packages required for the project. Run the following command in the project directory:
+### Install Dependencies
 
-bash
-Copy code
+Make sure to restore the NuGet packages required for the project. Run the following command in the project directory:
+
+```bash
 dotnet restore
+```
 
-###Run the Server: Before starting the client, ensure the server is running. Use the provided server code or your own implementation.
-bash
-Copy code
-node main.js
+### Run the Server
 
-###Run the Client: Open a new terminal, navigate to the Client directory, and run the following command:
+Before starting the client, ensure the server is running. Use the provided server code or your own implementation:
 
-bash
-Copy code
+```bash
+node abx_exchange_server/main.js
+```
+
+### Run the Client
+
+Open a new terminal, navigate to the Client directory, and run the following command:
+
+```bash
 dotnet run
+```
 
-### OR 
-Open the ABXExchange Client folderon Visual Studio and run the Program.cs file by clicking Start button on navigation menu.
+**OR**
 
-###View the Output: After execution, check the output.json file generated in the bin folder for the received packets.
----
+Open the `ABXExchangeClient` folder in Visual Studio and run the `Program.cs` file by clicking the Start button in the navigation menu.
 
-##Output
-The output.json file contains the parsed packet data in a structured format. Below is an example of the expected output:
+### View the Output
 
-json
-Copy code
+After execution, check the `output.json` file generated in the `bin` folder for the received packets.
+
+## Output
+
+The `output.json` file contains the parsed packet data in a structured format. Below is an example of the expected output:
+
+```json
 [
   {
     "Symbol": "AAPL",
@@ -105,16 +113,17 @@ Copy code
     "Sequence": 2
   }
 ]
----
+```
 
-##Contributing
+## Contributing
+
 Contributions are welcome! If you would like to contribute, please follow these steps:
 
-Fork the repository.
-Create a new branch for your feature or fix.
-Commit your changes and push to your branch.
-Submit a pull request.
----
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Commit your changes and push to your branch.
+4. Submit a pull request.
 
-##License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
